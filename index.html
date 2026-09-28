@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEYLON TEA SL | Premium Pure Ceylon Tea Direct to Your Doorstep</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ceylon: {
+              950: '#05261d',
+              900: '#0b3c2d',
+              800: '#145843',
+              700: '#1c755a',
+              100: '#e8f5f0',
+            },
+            gold: {
+              400: '#fce09b',
+              500: '#d4af37',
+              600: '#b89128',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#fbf9f4] text-stone-800 antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-stone-950 text-amber-400 text-xs py-2 px-4 border-b border-amber-500/30">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-1 md:space-y-0 text-center md:text-left">
+      <div class="flex items-center space-x-2 font-medium">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>🇱🇰 100% Pure Ceylon Tea | Islandwide & International Home Delivery</span>
+        <span class="hidden lg:inline-block text-amber-500/50">|</span>
+        <span class="hidden lg:inline text-stone-300">Use Code <strong class="text-amber-400">CEYLON10</strong> for 10% OFF</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px] font-semibold text-stone-300">
+        <a href="https://wa.me/94771234567" target="_blank" class="hover:text-amber-400 flex items-center space-x-1 transition">
+          <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.763.459 3.486 1.332 5.006l-1.415 5.171 5.294-1.388c1.464.798 3.116 1.218 4.775 1.219h.004c5.507 0 9.991-4.479 9.992-9.986.001-2.667-1.034-5.174-2.919-7.062s-4.394-2.928-7.073-2.928 hover:underline"/></svg>
+          <span>WhatsApp Order: +94 77 123 4567</span>
+        </a>
+        <div class="flex items-center space-x-1 border-l border-stone-800 pl-4">
+          <span class="text-stone-400">Currency:</span>
+          <select class="currency-select bg-stone-900 text-amber-400 border border-stone-700 rounded px-1.5 py-0.5 text-xs focus:outline-none focus:border-amber-500 cursor-pointer">
+            <option value="LKR">LKR (Rs.)</option>
+            <option value="USD">USD ($)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 glass-nav shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-md group-hover:scale-105 transition-transform duration-300">
+          <div class="w-full h-full bg-ceylon-950 rounded-[10px] flex items-center justify-center">
+            <svg class="w-7 h-7 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m0-18C8 3 4 7 4 12c0 4.5 3 7.5 8 9m0-21c4 0 8 4 8 9 0 4.5-3 7.5-8 9" />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold font-serif-luxury text-stone-100 tracking-wider block leading-tight">CEYLON TEA <span class="text-amber-400">SL</span></span>
+          <span class="text-[10px] font-semibold text-amber-400/80 tracking-widest uppercase block">Pure Sri Lankan Gold</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV LINKS -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-stone-200">
+        <a href="index.html" class="text-amber-400 border-b-2 border-amber-400 pb-1">Home</a>
+        <a href="shop.html" class="hover:text-amber-400 transition pb-1">Shop Teas</a>
+        <a href="about.html" class="hover:text-amber-400 transition pb-1">Our Heritage</a>
+        <a href="contact.html" class="hover:text-amber-400 transition pb-1">Contact Us</a>
+      </nav>
+
+      <!-- RIGHT ICONS (SEARCH, CART) -->
+      <div class="flex items-center space-x-4">
+        <!-- Search Input -->
+        <div class="relative hidden sm:block">
+          <input type="text" placeholder="Search tea varieties..." class="search-input bg-ceylon-950/80 text-stone-100 text-xs rounded-full pl-9 pr-4 py-2 border border-amber-500/30 focus:outline-none focus:border-amber-400 w-44 focus:w-60 transition-all duration-300 placeholder-stone-400" />
+          <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+
+        <!-- Cart Button -->
+        <a href="cart.html" class="relative bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-4 py-2 rounded-xl transition duration-300 flex items-center space-x-2 shadow-md hover:scale-105">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="hidden sm:inline text-xs uppercase tracking-wider">Cart</span>
+          <span class="cart-count-badge bg-ceylon-950 text-amber-400 text-[11px] font-extrabold px-2 py-0.5 rounded-full border border-amber-400">0</span>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="md:hidden text-stone-200 hover:text-amber-400 p-2 focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-ceylon-950/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-between p-6">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <span class="text-xl font-bold font-serif-luxury text-amber-400">CEYLON TEA SL</span>
+        <button id="close-mobile-menu" class="text-stone-400 hover:text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="py-6 space-y-4">
+        <a href="index.html" class="block text-lg font-semibold text-amber-400 py-2 border-b border-stone-900">Home</a>
+        <a href="shop.html" class="block text-lg font-semibold text-stone-200 py-2 border-b border-stone-900">Shop Teas</a>
+        <a href="about.html" class="block text-lg font-semibold text-stone-200 py-2 border-b border-stone-900">Our Heritage</a>
+        <a href="contact.html" class="block text-lg font-semibold text-stone-200 py-2 border-b border-stone-900">Contact Us</a>
+        <a href="cart.html" class="block text-lg font-semibold text-stone-200 py-2 border-b border-stone-900">Shopping Cart</a>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <a href="shop.html" class="block w-full text-center bg-amber-500 text-stone-950 font-bold py-3 rounded-xl shadow-lg">Explore All Teas</a>
+      <p class="text-center text-xs text-stone-400">© 2026 CEYLON TEA SL. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] bg-ceylon-950 flex items-center overflow-hidden">
+    <!-- Background Image Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1600" alt="Ceylon Tea Hills" class="w-full h-full object-cover object-center opacity-40 scale-105 transform transition duration-1000" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ceylon-950 via-ceylon-950/90 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-ceylon-950 via-transparent to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-left">
+        
+        <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 px-4 py-2 rounded-full backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          <span class="text-xs font-bold text-amber-300 uppercase tracking-widest">Direct From Nuwara Eliya & Dimbula Estates</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold font-serif-luxury text-white leading-tight">
+          The Gold Standard of <span class="gold-gradient-text">Pure Ceylon Tea</span>
+        </h1>
+
+        <p class="text-stone-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+          Savor the unmistakable aroma and rich taste of handpicked tea leaves from Sri Lanka’s legendary mist-shrouded mountain gardens. Delivered fresh to your home with guaranteed quality.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+          <a href="shop.html" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-extrabold px-8 py-4 rounded-xl transition duration-300 shadow-xl shadow-amber-500/20 text-center text-sm uppercase tracking-wider flex items-center justify-center space-x-2 group">
+            <span>Shop Premium Teas</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <a href="about.html" class="bg-ceylon-900/80 hover:bg-ceylon-800 text-stone-200 border border-amber-500/30 font-semibold px-8 py-4 rounded-xl transition duration-300 backdrop-blur-md text-center text-sm hover:border-amber-400">
+            Our 150-Year Heritage
+          </a>
+        </div>
+
+        <!-- Trust Features Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-stone-800/80">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-900/50 border border-emerald-500/30 flex items-center justify-center text-amber-400">
+              🌿
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">100% Pure</h5>
+              <p class="text-[10px] text-stone-400">Single Origin Leaf</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-900/50 border border-emerald-500/30 flex items-center justify-center text-amber-400">
+              🚚
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Home Delivery</h5>
+              <p class="text-[10px] text-stone-400">Islandwide & Express</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-900/50 border border-emerald-500/30 flex items-center justify-center text-amber-400">
+              🇱🇰
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Lion Logo</h5>
+              <p class="text-[10px] text-stone-400">Tea Board Certified</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-lg bg-emerald-900/50 border border-emerald-500/30 flex items-center justify-center text-amber-400">
+              ⭐
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-white">4.9 / 5 Rating</h5>
+              <p class="text-[10px] text-stone-400">Over 10,000+ Lovers</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- HERO IMAGE CARD / VISUAL -->
+      <div class="lg:col-span-5 relative hidden lg:block">
+        <div class="relative mx-auto max-w-md">
+          <div class="absolute -inset-1 bg-gradient-to-r from-amber-400 to-emerald-500 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+          <div class="relative rounded-3xl overflow-hidden bg-ceylon-900 border border-amber-500/30 shadow-2xl p-6 text-center space-y-6">
+            
+            <div class="relative h-72 rounded-2xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=800" alt="Fresh Ceylon Black Tea" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 text-left">
+                <span class="bg-amber-500 text-stone-950 font-bold text-[10px] px-2.5 py-1 rounded-full uppercase">Signature Selection</span>
+                <h3 class="text-xl font-bold font-serif-luxury text-white mt-1">Nuwara Eliya BOPF Special</h3>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between text-left border-t border-stone-800 pt-4">
+              <div>
+                <span class="text-stone-400 text-xs block">Regular Price (250g)</span>
+                <span class="text-2xl font-bold text-amber-400 font-serif-luxury" data-product-price="1850">Rs. 1,850</span>
+              </div>
+              <button onclick="cart.addItem('ct-001', 1)" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold px-5 py-3 rounded-xl transition duration-300 shadow-lg text-xs uppercase tracking-wider flex items-center space-x-1">
+                <span>Quick Add</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CATEGORIES SECTION -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block mb-2">Explore Our Collections</span>
+      <h2 class="text-3xl sm:text-5xl font-bold font-serif-luxury text-ceylon-950">Handcrafted Teas for Every Taste</h2>
+      <p class="text-stone-600 mt-3 text-sm sm:text-base">Select from pure unblended single estate teas, artisanal green teas, white tip buds, and fragrant spice tisanes.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Category 1 -->
+      <a href="shop.html?cat=black-tea" class="group relative rounded-2xl overflow-hidden h-64 bg-ceylon-950 shadow-md hover:shadow-2xl transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=800" alt="Black Tea" class="w-full h-full object-cover opacity-75 group-hover:scale-110 transition duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5">
+          <span class="text-amber-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Classic & Bold</span>
+          <h3 class="text-xl font-bold font-serif-luxury text-white group-hover:text-amber-300 transition">Black Teas</h3>
+          <p class="text-stone-300 text-xs mt-1">BOP, BOPF, OP1 & FBOP</p>
+        </div>
+      </a>
+
+      <!-- Category 2 -->
+      <a href="shop.html?cat=green-tea" class="group relative rounded-2xl overflow-hidden h-64 bg-ceylon-950 shadow-md hover:shadow-2xl transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?q=80&w=800" alt="Green Tea" class="w-full h-full object-cover opacity-75 group-hover:scale-110 transition duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5">
+          <span class="text-emerald-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Antioxidant Rich</span>
+          <h3 class="text-xl font-bold font-serif-luxury text-white group-hover:text-amber-300 transition">Green Teas</h3>
+          <p class="text-stone-300 text-xs mt-1">Sencha, Jasmine & Gunpowder</p>
+        </div>
+      </a>
+
+      <!-- Category 3 -->
+      <a href="shop.html?cat=white-tea" class="group relative rounded-2xl overflow-hidden h-64 bg-ceylon-950 shadow-md hover:shadow-2xl transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1563822249510-096fa476b772?q=80&w=800" alt="White Tea" class="w-full h-full object-cover opacity-75 group-hover:scale-110 transition duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5">
+          <span class="text-amber-300 text-[10px] font-bold uppercase tracking-widest block mb-1">Ultra Rare</span>
+          <h3 class="text-xl font-bold font-serif-luxury text-white group-hover:text-amber-300 transition">Silver Tips</h3>
+          <p class="text-stone-300 text-xs mt-1">Hand-picked Velvet Buds</p>
+        </div>
+      </a>
+
+      <!-- Category 4 -->
+      <a href="shop.html?cat=gift-boxes" class="group relative rounded-2xl overflow-hidden h-64 bg-ceylon-950 shadow-md hover:shadow-2xl transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=800" alt="Gift Boxes" class="w-full h-full object-cover opacity-75 group-hover:scale-110 transition duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-transparent"></div>
+        <div class="absolute bottom-5 left-5 right-5">
+          <span class="text-amber-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Luxury Gifting</span>
+          <h3 class="text-xl font-bold font-serif-luxury text-white group-hover:text-amber-300 transition">Gift Sets & Tins</h3>
+          <p class="text-stone-300 text-xs mt-1">Wooden Boxes & Vintage Tins</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BEST SELLERS SECTION -->
+  <section class="py-16 bg-stone-100/70 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block mb-1">Customer Favorites</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-ceylon-950">Most Loved Ceylon Teas</h2>
+        </div>
+        <a href="shop.html" class="mt-4 md:mt-0 inline-flex items-center space-x-2 text-sm font-bold text-ceylon-900 hover:text-amber-600 transition">
+          <span>View All 12 Products</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Featured Grid -->
+      <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE TEA FINDER QUIZ -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-ceylon-950 rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden border border-amber-500/30 shadow-2xl">
+      <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Interactive Tea Matcher</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-white">Find Your Perfect Ceylon Tea Match</h2>
+          <p class="text-stone-300 text-sm leading-relaxed">Not sure which elevation or grade suits your morning ritual or afternoon pause? Answer two quick questions to get an instant recommendation!</p>
+        </div>
+
+        <div class="lg:col-span-7 bg-ceylon-900/90 p-6 sm:p-8 rounded-2xl border border-amber-500/20 backdrop-blur-md">
+          <form id="tea-quiz-form" onsubmit="event.preventDefault(); findTeaMatch();" class="space-y-6">
+            
+            <div>
+              <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider mb-2">1. What is your preferred taste & intensity?</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="taste" value="bold" class="text-amber-500 focus:ring-0" checked>
+                  <span class="text-xs font-semibold">Strong & Malty</span>
+                </label>
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="taste" value="floral" class="text-amber-500 focus:ring-0">
+                  <span class="text-xs font-semibold">Light & Floral</span>
+                </label>
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="taste" value="spiced" class="text-amber-500 focus:ring-0">
+                  <span class="text-xs font-semibold">Aromatic Spiced</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-amber-300 uppercase tracking-wider mb-2">2. When do you enjoy your cup most?</label>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="time" value="morning" class="text-amber-500 focus:ring-0" checked>
+                  <span class="text-xs font-semibold">Morning Wake Up</span>
+                </label>
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="time" value="afternoon" class="text-amber-500 focus:ring-0">
+                  <span class="text-xs font-semibold">Afternoon Relax</span>
+                </label>
+                <label class="cursor-pointer border border-stone-700 rounded-xl p-3 text-center hover:border-amber-400 transition bg-ceylon-950/60 flex items-center justify-center space-x-2">
+                  <input type="radio" name="time" value="evening" class="text-amber-500 focus:ring-0">
+                  <span class="text-xs font-semibold">Evening Calm</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 font-extrabold py-3.5 rounded-xl text-xs uppercase tracking-wider hover:opacity-95 transition shadow-lg">
+              Find My Ideal Ceylon Tea
+            </button>
+          </form>
+
+          <div id="quiz-result" class="hidden mt-6 pt-6 border-t border-stone-800 text-center space-y-3">
+            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-widest">Recommended Choice For You</span>
+            <h4 id="quiz-recommended-name" class="text-xl font-bold font-serif-luxury text-white"></h4>
+            <p id="quiz-recommended-desc" class="text-xs text-stone-300 max-w-lg mx-auto"></p>
+            <button id="quiz-add-btn" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider inline-flex items-center space-x-2 transition">
+              <span>Add Recommendation To Cart</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 LEGENDARY REGIONS OF CEYLON TEA -->
+  <section class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block mb-2">Sri Lankan Terroirs</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-ceylon-950">6 Altitude Regions, 6 Unique Flavors</h2>
+        <p class="text-stone-600 mt-2 text-sm">Elevation, soil, and tropical monsoons sculpt distinct character into every leaf.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl border border-stone-200 bg-stone-50 hover:border-amber-400 transition group">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-xs font-extrabold text-amber-600 uppercase">High Grown (6,200ft)</span>
+            <span class="text-xs font-bold text-stone-400">Golden Brew</span>
+          </div>
+          <h3 class="text-xl font-bold font-serif-luxury text-ceylon-950 mb-2">Nuwara Eliya</h3>
+          <p class="text-xs text-stone-600 leading-relaxed mb-4">Known as the 'Champagne of Ceylon Teas'. Light, golden liquor with delicate floral perfume notes.</p>
+          <a href="shop.html" class="text-xs font-bold text-ceylon-900 hover:text-amber-600 flex items-center space-x-1">
+            <span>Explore Nuwara Eliya Teas</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-stone-200 bg-stone-50 hover:border-amber-400 transition group">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-xs font-extrabold text-amber-600 uppercase">High Grown (4,500ft)</span>
+            <span class="text-xs font-bold text-stone-400">Rosy Color</span>
+          </div>
+          <h3 class="text-xl font-bold font-serif-luxury text-ceylon-950 mb-2">Dimbula</h3>
+          <p class="text-xs text-stone-600 leading-relaxed mb-4">Mellow, full-bodied with a crisp reddish brew. Harvested during dry south-west monsoons.</p>
+          <a href="shop.html" class="text-xs font-bold text-ceylon-900 hover:text-amber-600 flex items-center space-x-1">
+            <span>Explore Dimbula Teas</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-stone-200 bg-stone-50 hover:border-amber-400 transition group">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-xs font-extrabold text-amber-600 uppercase">High Grown (4,000ft)</span>
+            <span class="text-xs font-bold text-stone-400">Pungent Flavor</span>
+          </div>
+          <h3 class="text-xl font-bold font-serif-luxury text-ceylon-950 mb-2">Uva Province</h3>
+          <p class="text-xs text-stone-600 leading-relaxed mb-4">Exotic, aromatic pungency shaped by the dry Catenarium mountain winds. Distinctive aftertaste.</p>
+          <a href="shop.html" class="text-xs font-bold text-ceylon-900 hover:text-amber-600 flex items-center space-x-1">
+            <span>Explore Uva Teas</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS SLIDER / GRID -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block mb-2">Real Feedback</span>
+      <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-ceylon-950">Loved by Tea Lovers Worldwide</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+        <div class="flex text-amber-400 text-sm">★★★★★</div>
+        <p class="text-xs text-stone-600 italic leading-relaxed">"The Silver Tips white tea is absolute perfection! Shipped directly to my home in Colombo within 24 hours. The packaging feels like royalty."</p>
+        <div class="flex items-center space-x-3 pt-2 border-t border-stone-100">
+          <div class="w-8 h-8 rounded-full bg-ceylon-900 text-amber-400 flex items-center justify-center font-bold text-xs">KN</div>
+          <div>
+            <h5 class="text-xs font-bold text-stone-900">Kavinda N.</h5>
+            <span class="text-[10px] text-stone-400">Verified Customer • Colombo 07</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+        <div class="flex text-amber-400 text-sm">★★★★★</div>
+        <p class="text-xs text-stone-600 italic leading-relaxed">"Nuwara Eliya BOPF tea has been my morning staple for years. CEYLON TEA SL sends the freshest batch I have ever tasted. Highly recommended!"</p>
+        <div class="flex items-center space-x-3 pt-2 border-t border-stone-100">
+          <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center font-bold text-xs">SP</div>
+          <div>
+            <h5 class="text-xs font-bold text-stone-900">Sarah P.</h5>
+            <span class="text-[10px] text-stone-400">Verified Buyer • Kandy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm space-y-4">
+        <div class="flex text-amber-400 text-sm">★★★★★</div>
+        <p class="text-xs text-stone-600 italic leading-relaxed">"Ordered the 6-Region Highland Wooden Sampler Box as a gift for my father in London. He was blown away by the taste and authenticity!"</p>
+        <div class="flex items-center space-x-3 pt-2 border-t border-stone-100">
+          <div class="w-8 h-8 rounded-full bg-emerald-800 text-white flex items-center justify-center font-bold text-xs">DR</div>
+          <div>
+            <h5 class="text-xs font-bold text-stone-900">Dr. Rohana M.</h5>
+            <span class="text-[10px] text-stone-400">International Order • UK</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER / DISCOUNT BANNER -->
+  <section class="bg-gradient-to-r from-ceylon-950 to-ceylon-900 py-16 px-4 sm:px-6 lg:px-8 border-t border-amber-500/20 text-white">
+    <div class="max-w-5xl mx-auto text-center space-y-6">
+      <span class="bg-amber-500/20 text-amber-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block">Exclusive Tea Club</span>
+      <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury">Join the CEYLON TEA SL Connoisseurs</h2>
+      <p class="text-stone-300 text-sm max-w-xl mx-auto">Subscribe for seasonal fresh harvest updates, rare single-estate reserves, and receive an instant 15% discount code.</p>
+      
+      <form onsubmit="event.preventDefault(); cart.showToast('Thank you! Your 15% promo code is TEA15', 'success');" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="Enter your email address" required class="flex-1 bg-ceylon-900 border border-stone-700 text-white text-xs rounded-xl px-4 py-3.5 focus:outline-none focus:border-amber-400" />
+        <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider transition">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-stone-800">
+      
+      <div class="lg:col-span-2 space-y-4">
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-lg bg-amber-500 text-stone-950 font-bold flex items-center justify-center font-serif-luxury text-lg">CT</div>
+          <span class="text-xl font-bold font-serif-luxury text-white">CEYLON TEA <span class="text-amber-400">SL</span></span>
+        </a>
+        <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+          Dedicated to supplying authentic 100% Pure Ceylon Tea straight from Sri Lanka’s lush highlands. Certified by the Sri Lanka Tea Board Lion Logo quality standard.
+        </p>
+        <div class="flex items-center space-x-3 text-xs text-amber-400 font-semibold pt-2">
+          <span>🇱🇰 Pure Ceylon Certified</span>
+          <span>•</span>
+          <span>🌱 Fair Trade Estates</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-serif-luxury">Quick Links</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="index.html" class="hover:text-amber-400 transition">Home Page</a></li>
+          <li><a href="shop.html" class="hover:text-amber-400 transition">Shop All Teas</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition">Our 150-Year Heritage</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition">Contact & Locations</a></li>
+          <li><a href="cart.html" class="hover:text-amber-400 transition">Cart & Checkout</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-serif-luxury">Tea Categories</h4>
+        <ul class="space-y-2.5 text-xs">
+          <li><a href="shop.html?cat=black-tea" class="hover:text-amber-400 transition">Black Tea (BOP, BOPF)</a></li>
+          <li><a href="shop.html?cat=green-tea" class="hover:text-amber-400 transition">Green Tea (Sencha, Jasmine)</a></li>
+          <li><a href="shop.html?cat=white-tea" class="hover:text-amber-400 transition">White Tea (Silver Tips)</a></li>
+          <li><a href="shop.html?cat=spiced-tea" class="hover:text-amber-400 transition">Ceylon Spiced Masala Chai</a></li>
+          <li><a href="shop.html?cat=gift-boxes" class="hover:text-amber-400 transition">Wooden Gift Sets & Tins</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 font-serif-luxury">Head Office & Contact</h4>
+        <ul class="space-y-3 text-xs">
+          <li class="flex items-start space-x-2">
+            <span class="text-amber-400">📍</span>
+            <span>CEYLON TEA SL Hub, Nuwara Eliya Road, Kandy, Sri Lanka</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-amber-400">📞</span>
+            <span>+94 11 234 5678 / +94 77 123 4567</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <span class="text-amber-400">✉️</span>
+            <span>orders@ceylonteasl.lk</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-500">
+      <p>© 2026 CEYLON TEA SL. All rights reserved. Crafted with passion for Sri Lanka.</p>
+      <div class="flex items-center space-x-4 mt-4 md:mt-0">
+        <span>Payment Accepted: Cash on Delivery, Visa, Mastercard, Direct Bank Transfer</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL STRUCTURE -->
+  <div id="quick-view-modal" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 relative shadow-2xl animate-modal-in border border-amber-500/30">
+      <button id="close-quick-view" class="absolute top-4 right-4 text-stone-400 hover:text-stone-900 p-2 rounded-full hover:bg-stone-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="quick-view-content">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JS SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Render featured products on Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('featured-products-grid');
+      if (grid) {
+        const featured = PRODUCTS.filter(p => p.featured).slice(0, 4);
+        grid.innerHTML = featured.map(p => createProductCardHTML(p)).join('');
+      }
+    });
+
+    // Quiz Matcher Logic
+    function findTeaMatch() {
+      const taste = document.querySelector('input[name="taste"]:checked').value;
+      const time = document.querySelector('input[name="time"]:checked').value;
+
+      let matchedId = 'ct-001'; // Default
+      if (taste === 'floral') matchedId = 'ct-002'; // Silver tips
+      else if (taste === 'spiced') matchedId = 'ct-005'; // Spiced chai
+      else if (time === 'afternoon') matchedId = 'ct-004'; // Earl grey
+      else if (time === 'evening') matchedId = 'ct-003'; // Sencha green
+
+      const product = PRODUCTS.find(p => p.id === matchedId);
+      if (product) {
+        document.getElementById('quiz-recommended-name').textContent = product.name;
+        document.getElementById('quiz-recommended-desc').textContent = product.description;
+        
+        const btn = document.getElementById('quiz-add-btn');
+        btn.onclick = () => cart.addItem(product.id, 1);
+        
+        const res = document.getElementById('quiz-result');
+        res.classList.remove('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>

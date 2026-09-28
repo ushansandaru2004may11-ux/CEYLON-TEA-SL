@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | CEYLON TEA SL</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ceylon: { 950: '#05261d', 900: '#0b3c2d', 800: '#145843', 700: '#1c755a' },
+            gold: { 400: '#fce09b', 500: '#d4af37', 600: '#b89128' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#fbf9f4] text-stone-800 antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-stone-950 text-amber-400 text-xs py-2 px-4 border-b border-amber-500/30">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-1 md:space-y-0">
+      <div class="flex items-center space-x-2 font-medium">
+        <span>🇱🇰 100% Pure Ceylon Tea | Islandwide Home Delivery Guaranteed</span>
+      </div>
+      <div class="flex items-center space-x-6 text-[11px] font-semibold text-stone-300">
+        <span>Hotline: +94 77 123 4567</span>
+        <div class="flex items-center space-x-1 border-l border-stone-800 pl-4">
+          <span class="text-stone-400">Currency:</span>
+          <select class="currency-select bg-stone-900 text-amber-400 border border-stone-700 rounded px-1.5 py-0.5 text-xs">
+            <option value="LKR">LKR (Rs.)</option>
+            <option value="USD">USD ($)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 glass-nav shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-md">
+          <div class="w-full h-full bg-ceylon-950 rounded-[10px] flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m0-18C8 3 4 7 4 12c0 4.5 3 7.5 8 9m0-21c4 0 8 4 8 9 0 4.5-3 7.5-8 9"/></svg>
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold font-serif-luxury text-stone-100 tracking-wider block">CEYLON TEA <span class="text-amber-400">SL</span></span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-stone-200">
+        <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+        <a href="shop.html" class="text-amber-400 border-b-2 border-amber-400 pb-1">Shop Teas</a>
+        <a href="about.html" class="hover:text-amber-400 transition">Our Heritage</a>
+        <a href="contact.html" class="hover:text-amber-400 transition">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="cart.html" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-4 py-2 rounded-xl transition duration-300 flex items-center space-x-2 shadow-md">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="hidden sm:inline text-xs uppercase tracking-wider">Cart</span>
+          <span class="cart-count-badge bg-ceylon-950 text-amber-400 text-[11px] font-extrabold px-2 py-0.5 rounded-full border border-amber-400">0</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-stone-200/50 py-3 px-4 sm:px-6 lg:px-8 text-xs font-semibold text-stone-600 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto flex items-center space-x-2">
+      <a href="index.html" class="hover:text-emerald-900">Home</a>
+      <span>/</span>
+      <a href="shop.html" class="hover:text-emerald-900">Shop</a>
+      <span>/</span>
+      <span id="breadcrumb-title" class="text-emerald-950">Product Detail</span>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL SECTION -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div id="product-detail-container" class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Loaded dynamically via JS -->
+    </div>
+
+    <!-- TABS SECTION -->
+    <div class="mt-16 bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+      <div class="flex border-b border-stone-200 space-x-8 text-sm font-bold">
+        <button onclick="switchTab('desc')" id="tab-btn-desc" class="pb-3 border-b-2 border-emerald-900 text-emerald-900">Description & Notes</button>
+        <button onclick="switchTab('brew')" id="tab-btn-brew" class="pb-3 text-stone-400 hover:text-stone-900">Brewing Guide</button>
+        <button onclick="switchTab('reviews')" id="tab-btn-reviews" class="pb-3 text-stone-400 hover:text-stone-900">Customer Reviews (<span id="tab-reviews-count">0</span>)</button>
+      </div>
+
+      <div class="py-6">
+        <!-- Desc Tab -->
+        <div id="tab-content-desc" class="space-y-4 text-sm text-stone-600 leading-relaxed">
+          <p id="detail-long-desc"></p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-stone-100">
+            <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-xs font-bold text-emerald-950 uppercase tracking-wider block mb-1">Single Estate</strong>
+              <p class="text-xs text-stone-600">Grown at high altitudes with zero blending from outside origins.</p>
+            </div>
+            <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-xs font-bold text-emerald-950 uppercase tracking-wider block mb-1">Hand-Picked Buds</strong>
+              <p class="text-xs text-stone-600">Only the finest two leaves and a bud picked by master harvesters.</p>
+            </div>
+            <div class="p-4 bg-emerald-50/50 rounded-xl border border-emerald-100">
+              <strong class="text-xs font-bold text-emerald-950 uppercase tracking-wider block mb-1">Lion Logo Authenticity</strong>
+              <p class="text-xs text-stone-600">100% Sri Lanka Tea Board certified pure Ceylon tea seal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brew Tab -->
+        <div id="tab-content-brew" class="hidden space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+            <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="text-2xl mb-1">🌡️</div>
+              <span class="text-xs text-stone-400 block">Water Temp</span>
+              <strong id="brew-temp-val" class="text-sm text-emerald-950 font-bold">95°C</strong>
+            </div>
+            <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="text-2xl mb-1">⏳</div>
+              <span class="text-xs text-stone-400 block">Steeping Time</span>
+              <strong id="brew-time-val" class="text-sm text-emerald-950 font-bold">3-5 mins</strong>
+            </div>
+            <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="text-2xl mb-1">🥄</div>
+              <span class="text-xs text-stone-400 block">Tea Quantity</span>
+              <strong class="text-sm text-emerald-950 font-bold">1 tsp per cup (2.5g)</strong>
+            </div>
+            <div class="p-5 bg-stone-50 rounded-2xl border border-stone-200">
+              <div class="text-2xl mb-1">🥛</div>
+              <span class="text-xs text-stone-400 block">Milk & Sweetener</span>
+              <strong class="text-sm text-emerald-950 font-bold">Optional (Best pure)</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div id="tab-content-reviews" class="hidden space-y-6">
+          <div class="space-y-4" id="reviews-list">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Write a Review Form -->
+          <div class="pt-6 border-t border-stone-200">
+            <h4 class="text-base font-bold font-serif-luxury text-stone-900 mb-4">Write a Review</h4>
+            <form onsubmit="event.preventDefault(); submitReview();" class="space-y-4 max-w-xl">
+              <div class="grid grid-cols-2 gap-4">
+                <input type="text" id="rev-name" placeholder="Your Name" required class="bg-stone-50 border border-stone-300 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-800" />
+                <select id="rev-rating" class="bg-stone-50 border border-stone-300 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-emerald-800">
+                  <option value="5">★★★★★ (5 Stars)</option>
+                  <option value="4">★★★★☆ (4 Stars)</option>
+                  <option value="3">★★★☆☆ (3 Stars)</option>
+                </select>
+              </div>
+              <textarea id="rev-comment" placeholder="Share your tasting experience..." required rows="3" class="w-full bg-stone-50 border border-stone-300 text-xs rounded-xl p-4 focus:outline-none focus:border-emerald-800"></textarea>
+              <button type="submit" class="bg-emerald-900 text-amber-400 font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider">Submit Review</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div class="mt-20">
+      <h3 class="text-2xl font-bold font-serif-luxury text-ceylon-950 mb-8">You May Also Like</h3>
+      <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </main>
+
+  <!-- JS SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let currentProduct = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id') || 'ct-001';
+      
+      currentProduct = PRODUCTS.find(p => p.id === productId) || PRODUCTS[0];
+      renderProductDetail(currentProduct);
+      renderRelatedProducts(currentProduct);
+    });
+
+    function renderProductDetail(p) {
+      document.getElementById('breadcrumb-title').textContent = p.name;
+      document.title = `${p.name} | CEYLON TEA SL`;
+
+      const tasteBadges = p.tasteNotes.map(n => 
+        `<span class="px-3 py-1 bg-amber-500/10 text-amber-800 border border-amber-500/20 rounded-full text-xs font-semibold">${n}</span>`
+      ).join(' ');
+
+      const stars = '★'.repeat(Math.floor(p.rating)) + '☆'.repeat(5 - Math.floor(p.rating));
+
+      const container = document.getElementById('product-detail-container');
+      container.innerHTML = `
+        <div class="lg:col-span-6 space-y-4">
+          <div class="relative overflow-hidden rounded-3xl bg-stone-100 border border-stone-200 shadow-lg">
+            <img id="main-product-img" src="${p.image}" alt="${p.name}" class="w-full h-[450px] object-cover" />
+            <span class="absolute top-4 left-4 bg-amber-500 text-stone-950 font-bold text-xs px-3 py-1 rounded-full uppercase shadow">${p.badge}</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6">
+          <div>
+            <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-1">${p.region}</span>
+            <h1 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-stone-900">${p.name}</h1>
+            <p class="text-sm text-stone-500 mt-1">${p.subtitle}</p>
+          </div>
+
+          <div class="flex items-center space-x-3">
+            <span class="text-amber-400 text-base">${stars}</span>
+            <span class="text-xs font-semibold text-stone-500">(${p.rating} / 5.0 from ${p.reviewsCount} reviews)</span>
+          </div>
+
+          <div class="flex items-baseline space-x-3">
+            <span class="text-3xl font-bold text-emerald-950 font-serif-luxury" data-product-price="${p.price}">
+              ${formatPrice(p.price, cart.currency)}
+            </span>
+            <span class="text-xs text-stone-400">Taxes included • Free delivery over Rs. 5,000</span>
+          </div>
+
+          <p class="text-sm text-stone-600 leading-relaxed">${p.description}</p>
+
+          <div class="space-y-2">
+            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider">Select Packaging Weight:</label>
+            <div class="flex space-x-3">
+              <button onclick="selectWeight('100g')" class="weight-btn border-2 border-stone-200 py-2 px-4 rounded-xl text-xs font-bold hover:border-emerald-900 transition">100g Pouch</button>
+              <button onclick="selectWeight('250g')" class="weight-btn border-2 border-emerald-900 bg-emerald-50 py-2 px-4 rounded-xl text-xs font-bold text-emerald-950">250g Tin</button>
+              <button onclick="selectWeight('500g')" class="weight-btn border-2 border-stone-200 py-2 px-4 rounded-xl text-xs font-bold hover:border-emerald-900 transition">500g Pack</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-2">Taste Profile:</label>
+            <div class="flex flex-wrap gap-2">${tasteBadges}</div>
+          </div>
+
+          <div class="flex items-center space-x-4 pt-4 border-t border-stone-200">
+            <div class="flex items-center border border-stone-300 rounded-xl overflow-hidden bg-white">
+              <button onclick="decrementQtyInput('p-qty')" class="px-4 py-3 text-stone-600 hover:bg-stone-100 font-bold">-</button>
+              <input type="number" id="p-qty" value="1" min="1" class="w-12 text-center text-sm font-bold border-none focus:ring-0 text-stone-900" readonly />
+              <button onclick="incrementQtyInput('p-qty')" class="px-4 py-3 text-stone-600 hover:bg-stone-100 font-bold">+</button>
+            </div>
+
+            <button onclick="addCurrentToCart()" class="flex-1 bg-emerald-900 hover:bg-emerald-800 text-amber-400 font-bold py-4 px-6 rounded-xl transition duration-300 shadow-xl flex items-center justify-center space-x-2 text-sm uppercase tracking-wider">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>Add To Cart</span>
+            </button>
+          </div>
+
+          <a href="cart.html" onclick="addCurrentToCart()" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3.5 rounded-xl transition text-xs uppercase tracking-wider shadow-md">
+            Buy Now (Proceed to Checkout)
+          </a>
+        </div>
+      `;
+
+      // Fill tabs data
+      document.getElementById('detail-long-desc').textContent = p.description + " Handpicked carefully by traditional artisans, this grade represents pure, unadulterated Ceylon quality.";
+      document.getElementById('brew-temp-val').textContent = p.brewTemp;
+      document.getElementById('brew-time-val').textContent = p.brewTime;
+      document.getElementById('tab-reviews-count').textContent = p.reviewsCount;
+
+      renderReviews(p);
+    }
+
+    let selectedWeightVal = '250g';
+    function selectWeight(w) {
+      selectedWeightVal = w;
+      document.querySelectorAll('.weight-btn').forEach(btn => {
+        if (btn.textContent.includes(w)) {
+          btn.className = "weight-btn border-2 border-emerald-900 bg-emerald-50 py-2 px-4 rounded-xl text-xs font-bold text-emerald-950";
+        } else {
+          btn.className = "weight-btn border-2 border-stone-200 py-2 px-4 rounded-xl text-xs font-bold hover:border-emerald-900 transition";
+        }
+      });
+    }
+
+    function addCurrentToCart() {
+      const qty = parseInt(document.getElementById('p-qty').value || 1);
+      cart.addItem(currentProduct.id, qty, selectedWeightVal);
+    }
+
+    function switchTab(tabKey) {
+      ['desc', 'brew', 'reviews'].forEach(t => {
+        document.getElementById(`tab-content-${t}`).classList.add('hidden');
+        document.getElementById(`tab-btn-${t}`).className = "pb-3 text-stone-400 hover:text-stone-900";
+      });
+      document.getElementById(`tab-content-${tabKey}`).classList.remove('hidden');
+      document.getElementById(`tab-btn-${tabKey}`).className = "pb-3 border-b-2 border-emerald-900 text-emerald-900 font-bold";
+    }
+
+    function renderReviews(p) {
+      const list = document.getElementById('reviews-list');
+      list.innerHTML = `
+        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200 space-y-2">
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold text-stone-900">Mahanama Perera</span>
+            <span class="text-amber-400 text-xs">★★★★★</span>
+          </div>
+          <p class="text-xs text-stone-600">"Sensational tea! Golden color, aroma is unmatched. Ordering another tin."</p>
+        </div>
+        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200 space-y-2">
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold text-stone-900">Amali Wickramasinghe</span>
+            <span class="text-amber-400 text-xs">★★★★★</span>
+          </div>
+          <p class="text-xs text-stone-600">"Delivered fast to Galle. Packed very well. 10/10."</p>
+        </div>
+      `;
+    }
+
+    function submitReview() {
+      const name = document.getElementById('rev-name').value;
+      const comment = document.getElementById('rev-comment').value;
+      const rating = document.getElementById('rev-rating').value;
+
+      const list = document.getElementById('reviews-list');
+      const div = document.createElement('div');
+      div.className = "p-4 bg-emerald-50/60 rounded-xl border border-emerald-200 space-y-2";
+      div.innerHTML = `
+        <div class="flex justify-between items-center">
+          <span class="text-xs font-bold text-emerald-950">${name} (Just Now)</span>
+          <span class="text-amber-400 text-xs">${'★'.repeat(rating)}</span>
+        </div>
+        <p class="text-xs text-stone-700">${comment}</p>
+      `;
+      list.prepend(div);
+      cart.showToast('Review submitted! Thank you.', 'success');
+      document.getElementById('rev-comment').value = '';
+    }
+
+    function renderRelatedProducts(p) {
+      const related = PRODUCTS.filter(item => item.id !== p.id).slice(0, 4);
+      const grid = document.getElementById('related-products-grid');
+      grid.innerHTML = related.map(item => createProductCardHTML(item)).join('');
+    }
+  </script>
+
+</body>
+</html>

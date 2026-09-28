@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Heritage & Story | CEYLON TEA SL</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ceylon: { 950: '#05261d', 900: '#0b3c2d', 800: '#145843', 700: '#1c755a' },
+            gold: { 400: '#fce09b', 500: '#d4af37', 600: '#b89128' }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#fbf9f4] text-stone-800 antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-stone-950 text-amber-400 text-xs py-2 px-4 border-b border-amber-500/30">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <span>🇱🇰 100% Pure Ceylon Tea | Fresh From Nuwara Eliya & Dimbula Highlands</span>
+      <div class="flex items-center space-x-4">
+        <span>Hotline: +94 77 123 4567</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 glass-nav shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5 shadow-md">
+          <div class="w-full h-full bg-ceylon-950 rounded-[10px] flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v18m0-18C8 3 4 7 4 12c0 4.5 3 7.5 8 9m0-21c4 0 8 4 8 9 0 4.5-3 7.5-8 9"/></svg>
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold font-serif-luxury text-stone-100 tracking-wider block">CEYLON TEA <span class="text-amber-400">SL</span></span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-stone-200">
+        <a href="index.html" class="hover:text-amber-400 transition">Home</a>
+        <a href="shop.html" class="hover:text-amber-400 transition">Shop Teas</a>
+        <a href="about.html" class="text-amber-400 border-b-2 border-amber-400 pb-1">Our Heritage</a>
+        <a href="contact.html" class="hover:text-amber-400 transition">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="cart.html" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-4 py-2 rounded-xl transition flex items-center space-x-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="cart-count-badge bg-ceylon-950 text-amber-400 text-[11px] font-extrabold px-2 py-0.5 rounded-full border border-amber-400">0</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT HERO BANNER -->
+  <section class="relative bg-ceylon-950 text-white py-24 px-4 sm:px-6 lg:px-8 border-b border-amber-500/20 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1600" alt="Ceylon Plantation" class="w-full h-full object-cover opacity-30" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ceylon-950 via-ceylon-950/80 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+      <span class="bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest inline-block">Since 1867 • Sri Lanka</span>
+      <h1 class="text-4xl sm:text-6xl font-bold font-serif-luxury text-white">The Legacy of <span class="gold-gradient-text">Pure Ceylon Tea</span></h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        From the mist-shrouded mountain peaks of Nuwara Eliya to your teacup, discover how Sri Lanka became the world’s most celebrated tea nation.
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR STORY CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-24">
+    
+    <!-- STORY BLOCK 1 -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 space-y-6">
+        <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block">Chapter 01</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-serif-luxury text-ceylon-950">Where Mountains Touch The Sky</h2>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          In 1867, a Scotsman named James Taylor planted the first 19 acres of tea in Loolkondera, Kandy. The unique tropical climate, combined with high elevation mountain air, nutrient-rich soil, and rainfall patterns, created tea leaves with an unmatched aroma and brisk flavor.
+        </p>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Today, <strong>CEYLON TEA SL</strong> preserves this ancient craftsmanship. We work directly with master plunkers who harvest only the top two leaves and a bud at break of dawn when the dew is still fresh.
+        </p>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="relative rounded-3xl overflow-hidden border border-stone-200 shadow-xl">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1200" alt="Tea Plucking" class="w-full h-[400px] object-cover" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 STEP ARTISTRY PROCESS -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-sm space-y-12">
+      <div class="text-center max-w-2xl mx-auto">
+        <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block mb-1">Our Craftsmanship</span>
+        <h2 class="text-3xl font-bold font-serif-luxury text-ceylon-950">From Estate Leaf to Teacup</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-900 text-amber-400 font-bold text-xs flex items-center justify-center">01</span>
+          <h4 class="text-base font-bold font-serif-luxury text-stone-900">Hand Plucking</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">Only tender young tea buds are selectively hand-picked at sunrise by experienced estate artisans.</p>
+        </div>
+
+        <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-900 text-amber-400 font-bold text-xs flex items-center justify-center">02</span>
+          <h4 class="text-base font-bold font-serif-luxury text-stone-900">Withering & Rolling</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">Leaves are gently laid on woven troughs to reduce moisture, then rolled to release essential tea oils.</p>
+        </div>
+
+        <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-900 text-amber-400 font-bold text-xs flex items-center justify-center">03</span>
+          <h4 class="text-base font-bold font-serif-luxury text-stone-900">Oxidation & Drying</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">Natural fermentation develops the signature golden-red liquor hue and crisp aroma before firing.</p>
+        </div>
+
+        <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200 space-y-3">
+          <span class="w-8 h-8 rounded-full bg-emerald-900 text-amber-400 font-bold text-xs flex items-center justify-center">04</span>
+          <h4 class="text-base font-bold font-serif-luxury text-stone-900">Master Tasting</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">Expert tea sommelier taste-checks each batch before seal packing into our signature foil tins.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LION LOGO CERTIFICATION BLOCK -->
+    <div class="bg-ceylon-950 text-white rounded-3xl p-8 sm:p-12 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-4 max-w-xl">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Guaranteed Authenticity</span>
+        <h3 class="text-3xl font-bold font-serif-luxury text-white">The Sri Lanka Tea Board Lion Logo</h3>
+        <p class="text-stone-300 text-sm leading-relaxed">
+          The sword-bearing lion symbol is your guarantee that the tea inside is <strong>100% Pure Ceylon Tea</strong> grown, packed, and quality certified in Sri Lanka. No blending with inferior origin teas.
+        </p>
+      </div>
+      <a href="shop.html" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-extrabold px-8 py-4 rounded-xl text-xs uppercase tracking-wider transition shadow-xl whitespace-nowrap">
+        Explore Lion Certified Teas
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 pt-12 pb-8 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs text-stone-500 space-y-2">
+      <p>© 2026 CEYLON TEA SL. All rights reserved. Sri Lanka Tea Board Certified.</p>
+    </div>
+  </footer>
+
+  <!-- JS SCRIPTS -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
